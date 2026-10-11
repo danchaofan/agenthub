@@ -11,8 +11,8 @@ const dataDir = resolve(process.env.AGENTHUB_DATA_DIR ?? join(root, '.agenthub')
 const port = Number(process.env.AGENTHUB_PORT ?? 4317);
 if (!Number.isInteger(port) || port < 1 || port > 65535) throw new Error('AGENTHUB_PORT 无效');
 const acceptancePath = join(dataDir, 'acceptance-project');
-await mkdir(acceptancePath, { recursive: true });
 await mkdir(dataDir, { recursive: true, mode: 0o700 });
+await mkdir(acceptancePath, { recursive: true });
 const store = new Store(join(dataDir, 'agenthub.sqlite'));
 store.acquireService();
 const engine = new Engine(store, new KimiRunner());
