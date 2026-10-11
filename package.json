@@ -1,0 +1,64 @@
+{
+  "name": "agenthub",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "bin": {
+    "agenthub": "scripts/agenthub.sh"
+  },
+  "scripts": {
+    "dev": "node --import tsx scripts/cli.ts dev",
+    "build": "tsc --noEmit && vite build",
+    "start": "node --import tsx scripts/cli.ts start",
+    "test": "node --import tsx --test test/*.test.ts",
+    "test:browser": "playwright test",
+    "test:live": "tsx scripts/live-acceptance.ts",
+    "dashboard": "node --import tsx scripts/cli.ts dashboard",
+    "stop": "node --import tsx scripts/cli.ts stop",
+    "status": "node --import tsx scripts/cli.ts status",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check:release": "node --import tsx scripts/check-release.ts",
+    "check": "npm run typecheck && npm run format:check && npm run check:release",
+    "test:example": "node --test examples/kimi-acceptance/store.test.js",
+    "test:example-browser": "node --import tsx scripts/verify-acceptance.ts"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.58.0",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "prettier": "3.9.10",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vite": "^7.0.0"
+  },
+  "description": "A local workbench for planning, executing, reviewing, and iterating with coding agents.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danchaofan/agenthub.git"
+  },
+  "homepage": "https://github.com/danchaofan/agenthub#readme",
+  "bugs": {
+    "url": "https://github.com/danchaofan/agenthub/issues"
+  },
+  "keywords": [
+    "coding-agent",
+    "kimi",
+    "acp",
+    "local-first",
+    "agent-orchestration"
+  ]
+}

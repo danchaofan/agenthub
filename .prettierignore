@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.agenthub/
+botmux/
+references/
+artifacts/
+test-results/
+playwright-report/
+package-lock.json
+docs/live-acceptance.json
+docs/acceptance-browser*.json
+docs/botmux-source.json

@@ -1,0 +1,35 @@
+node_modules/
+dist/
+.agenthub/
+.agenthub-*/
+.kimi-code/
+.aws/
+test-results/
+playwright-report/
+*.log
+*.pem
+*.key
+.DS_Store
+.env
+.env.*
+!.env.example
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+artifacts/
+coverage/
+
+# Local upstream archives used for research, not product dependencies.
+/botmux/
+/references/
+
+# Historical local acceptance data and screenshots. Public demo images live in docs/images/.
+/docs/live-acceptance.json
+/docs/acceptance-browser.json
+/docs/acceptance-browser-failure.json
+/docs/botmux-source.json
+/docs/workbench.png
+/docs/execution-details.png
+/docs/kimi-acceptance.png
+/scripts/probe-kimi.py

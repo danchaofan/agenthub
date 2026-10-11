@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>任务列表</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>任务列表</h1>
+
+      <form id="todo-form" class="todo-form" autocomplete="off">
+        <input
+          id="todo-input"
+          class="todo-input"
+          type="text"
+          placeholder="要做点什么？"
+          aria-label="新任务标题"
+          maxlength="200"
+        />
+        <select id="priority-select" class="priority-select" aria-label="任务优先级">
+          <option value="high">高</option>
+          <option value="medium" selected>中</option>
+          <option value="low">低</option>
+        </select>
+        <button type="submit" class="btn btn-add">新增</button>
+      </form>
+
+      <nav class="filters" aria-label="状态筛选">
+        <button type="button" class="filter-btn is-active" data-filter="all">全部</button>
+        <button type="button" class="filter-btn" data-filter="active">未完成</button>
+        <button type="button" class="filter-btn" data-filter="completed">已完成</button>
+      </nav>
+
+      <nav class="filters filters-priority" aria-label="优先级筛选">
+        <button type="button" class="filter-btn is-active" data-priority-filter="all">全部</button>
+        <button type="button" class="filter-btn" data-priority-filter="high">高</button>
+        <button type="button" class="filter-btn" data-priority-filter="medium">中</button>
+        <button type="button" class="filter-btn" data-priority-filter="low">低</button>
+      </nav>
+
+      <ul id="todo-list" class="todo-list"></ul>
+
+      <p id="empty-tip" class="empty-tip" hidden>暂无任务，添加一条吧。</p>
+    </main>
+
+    <script src="store.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
