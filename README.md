@@ -2,7 +2,7 @@
 
 **把本地 coding agent 组成一支可配置、可确认、可追踪的 AI 战队。**
 
-[English](README.en.md) · [贡献指南](CONTRIBUTING.md) · [架构](docs/architecture.md) · [验证说明](docs/testing.md) · [MIT](LICENSE)
+[English](README.en.md) · [后续 TODO](TODO.md) · [贡献指南](CONTRIBUTING.md) · [架构](docs/architecture.md) · [验证说明](docs/testing.md) · [MIT](LICENSE)
 
 Agenthub 是一个本地服务与网页工作台：领队先理解需求、拆解任务并分配成员，你确认后再执行；实现结束后由独立会话审查，最多自动返工一次，最后汇总结果。你可以继续反馈，在同一任务里开启下一轮。
 
@@ -179,6 +179,8 @@ docs/                   架构、调研、验证和模拟数据截图
 新增 agent 通过 `server/types.ts` 的 `AgentRunner` 接口接入；流程编排由 `server/engine.ts` 管理。浏览器只和本地服务通信，便于未来复用到桌面客户端。参见 [架构说明](docs/architecture.md)和[贡献指南](CONTRIBUTING.md)。
 
 ## 当前边界与后续方向
+
+后续工作按“Kimi 使用体验完善 → 多 agent 接入 → 战队推荐增强 → Mac 客户端”推进。优先级、待办项和验收标准见 [TODO.md](TODO.md)。
 
 - 当前只接入 Kimi；其他 coding agent 和 Mac 客户端属于后续计划。
 - 推荐是规则建议，尚无跨模型评测、真实成本学习或跨账号额度调度。

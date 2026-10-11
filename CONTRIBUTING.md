@@ -2,6 +2,8 @@
 
 Agenthub is an early local workbench. Small, focused pull requests are welcome. Discuss new agent adapters or workflow changes in an issue before implementing a large change.
 
+See [TODO.md](TODO.md) for priorities and acceptance criteria. When delivering a planned item, update its status and link the implementation and verification evidence; fixture coverage alone does not establish live agent support.
+
 ## Development
 
 Use Node.js 22.13 or newer (24 LTS recommended):

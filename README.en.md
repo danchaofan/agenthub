@@ -2,11 +2,13 @@
 
 **A local workbench for a configurable team of coding agents.**
 
-[中文](README.md) · [Contributing](CONTRIBUTING.md) · [Architecture](docs/architecture.md) · [MIT License](LICENSE)
+[中文](README.md) · [Roadmap / TODO (中文)](TODO.md) · [Contributing](CONTRIBUTING.md) · [Architecture](docs/architecture.md) · [MIT License](LICENSE)
 
 Configure a leader, workers and a reviewer. The leader proposes a plan; you approve or edit it before workers execute sequentially. An independent session reviews the result, with at most one automatic rework per round. The leader summarizes the delivery, and your feedback starts a new round with another approval.
 
 The first release integrates **Kimi Code CLI**. Other agents and a Mac desktop package are planned. The current product is a local HTTP service and a desktop-style web workbench.
+
+The [TODO plan](TODO.md) lists priorities and acceptance criteria: stabilize the Kimi experience, add agents, improve global team recommendations, then package a Mac client. Additional adapter order is provisional; no release dates are committed.
 
 ![Workbench](docs/images/workbench.png)
 
